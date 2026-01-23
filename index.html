@@ -8,67 +8,68 @@
     <title>Calculator</title>
 </head>
 <body>
-    <div class="container bg-secondary" id="bck-container">
+    <div class="container bg-secondary text-dark" id="bck-container">
         <div class="row  d-flex justify-content-center mt-5 mb-4" id="border">
             <input type="text" class="form-control p-4 mt-4 mb-4" id="screen" readonly>
         </div>
         <div class="row p-3">
             <div class="col-3">
-            <button class="bg-white rounded-3 border-0 fw-bold d-flex justify-content-center align-items-center shadow" onclick="">7</button>
+            <button class="bg-white rounded-3 border-0 fw-bold d-flex justify-content-center align-items-center shadow" onclick="appendNumber('7')">7</button>
             </div>
             <div class="col-3">
-            <button class="bg-white rounded-3 border-0 fw-bold d-flex justify-content-center align-items-center shadow" onclick="">8</button>
+            <button class="bg-white rounded-3 border-0 fw-bold d-flex justify-content-center align-items-center shadow" onclick="appendNumber('8')">8</button>
             </div>
             <div class="col-3">
-            <button class="bg-white rounded-3 border-0 fw-bold d-flex justify-content-center align-items-center shadow" onclick="">9</button>
+            <button class="bg-white rounded-3 border-0 fw-bold d-flex justify-content-center align-items-center shadow" onclick="appendNumber('9')">9</button>
             </div>
             <div class="col-3">
-            <button class="bg-white rounded-3 border-0 fw-bold d-flex justify-content-center align-items-center shadow" onclick="">/</button>
+            <button class="bg-white rounded-3 border-0 fw-bold d-flex justify-content-center align-items-center shadow" onclick="appendOperation('/')">/</button>
             </div>
             </div>
             
             <div class="row p-3">
             <div class="col-3">
-            <button class="bg-white rounded-3 border-0 fw-bold d-flex justify-content-center align-items-center shadow" onclick="">4</button>
+            <button class="bg-white rounded-3 border-0 fw-bold d-flex justify-content-center align-items-center shadow" onclick="appendNumber('4')">4</button>
             </div>
             <div class="col-3">
-            <button class="bg-white rounded-3 border-0 fw-bold d-flex justify-content-center align-items-center shadow" onclick="">5</button>
+            <button class="bg-white rounded-3 border-0 fw-bold d-flex justify-content-center align-items-center shadow" onclick="appendNumber('5')">5</button>
             </div>
             <div class="col-3">
-            <button class="bg-white rounded-3 border-0 fw-bold d-flex justify-content-center align-items-center shadow" onclick="">6</button>
+            <button class="bg-white rounded-3 border-0 fw-bold d-flex justify-content-center align-items-center shadow" onclick="appendNumber('6')">6</button>
             </div>
             <div class="col-3">
-            <button class="bg-white rounded-3 border-0 fw-bold d-flex justify-content-center align-items-center shadow" onclick="">x</button>
+            <button class="bg-white rounded-3 border-0 fw-bold d-flex justify-content-center align-items-center shadow" onclick="appendOperation('*')">x</button>
             </div>
         </div>
            <div class="row p-3">
             <div class="col-3">
-            <button class="bg-white rounded-3 border-0 fw-bold d-flex justify-content-center align-items-center shadow" onclick="">1</button>
+            <button class="bg-white rounded-3 border-0 fw-bold d-flex justify-content-center align-items-center shadow" onclick="appendNumber('1')">1</button>
             </div>
             <div class="col-3">
-            <button class="bg-white rounded-3 border-0 fw-bold d-flex justify-content-center align-items-center shadow" onclick="">2</button>
+            <button class="bg-white rounded-3 border-0 fw-bold d-flex justify-content-center align-items-center shadow" onclick="appendNumber('2')">2</button>
             </div>
             <div class="col-3">
-            <button class="bg-white rounded-3 border-0 fw-bold d-flex justify-content-center align-items-center shadow" onclick="">3</button>
+            <button class="bg-white rounded-3 border-0 fw-bold d-flex justify-content-center align-items-center shadow" onclick="appendNumber('3')">3</button>
             </div>
             <div class="col-3">
-            <button class="bg-white rounded-3 border-0 fw-bold d-flex justify-content-center align-items-center shadow " onclick="">-</button>
+            <button class="bg-white rounded-3 border-0 fw-bold d-flex justify-content-center align-items-center shadow " onclick="appendOperation('-')">-</button>
             </div>
             </div>
             <div class="row p-3">
             <div class="col-3">
-            <button class="bg-white rounded-3 border-0 fw-bold d-flex justify-content-center align-items-center shadow" onclick="">0</button>
+            <button class="bg-white rounded-3 border-0 fw-bold d-flex justify-content-center align-items-center shadow" onclick="appendNumber('0')">0</button>
             </div>
             <div class="col-3">
-            <button class="bg-white rounded-3 border-0 fw-bold d-flex justify-content-center align-items-center shadow" onclick="">.</button>
+            <button class="bg-white rounded-3 border-0 fw-bold d-flex justify-content-center align-items-center shadow" onclick="appendNumber('.')">.</button>
             </div>
             <div class="col-3">
-            <button class="bg-white rounded-3 border-0 fw-bold d-flex justify-content-center align-items-center shadow" onclick="">+</button>
+            <button class="bg-white rounded-3 border-0 fw-bold d-flex justify-content-center align-items-center shadow" onclick="appendOperation('+')">+</button>
             </div>
             <div class="col-3">
-            <button class="bg-danger rounded-3 border-0 fw-bold d-flex justify-content-center align-items-center shadow" onclick="">=</button>
+            <button class="bg-danger rounded-3 border-0 fw-bold d-flex justify-content-center align-items-center shadow" onclick="calculate()">=</button>
             </div>
         </div>
     </div>
+    <script src="index.js"></script>
 </body>
 </html>

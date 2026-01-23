@@ -3,7 +3,7 @@
     background-color: rgb(141, 201, 95);
     border-color: rgb(104,122,130);
     border-width: 10px;
-    
+    font-size: 40px;
 }
 button{
     height: 70px;
@@ -16,7 +16,7 @@ button{
 #bck-container{
     width: 400px;
     border-radius: 20px;
-    height: 620px;
+    height: 660px;
    
 }
 #border{
