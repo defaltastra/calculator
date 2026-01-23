@@ -1,9 +1,16 @@
+@font-face {
+    font-family: 'Calculator.ttf';
+    src: url(/Calculator.ttf);
+}
 #screen{
     width: 350px;
     background-color: rgb(141, 201, 95);
     border-color: rgb(104,122,130);
     border-width: 10px;
-    font-size: 40px;
+    font-size: 50px;
+    font-family: 'Calculator.ttf',sans-serif;
+    
+    
 }
 button{
     height: 70px;
@@ -16,7 +23,7 @@ button{
 #bck-container{
     width: 400px;
     border-radius: 20px;
-    height: 660px;
+    height: 700px;
    
 }
 #border{
@@ -24,4 +31,10 @@ button{
     border-radius: 20px 20px 0px 0px ;
     padding: 10px;
     
+}
+#reset{
+    height: 50px;
+    width: 50px;
+    border-radius: 30px;
+    font-size: 20px;
 }

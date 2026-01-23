@@ -49,3 +49,9 @@ function calculate(){
     preveiousInput='';
     document.getElementById('screen').value=currentInput;
 }
+function Reset(){
+    currentInput ='';
+    preveiousInput='';
+    currentOperation='';
+    document.getElementById('screen').value='';
+}
