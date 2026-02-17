@@ -1,83 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="Calculator.ttf">
     <link rel="stylesheet" href="style.css">
     <title>Calculator</title>
 </head>
+
 <body>
+    <div id="tsparticles"></div>
+    <div class="theme-switch-wrapper">
+        <label class="theme-switch" for="checkbox">
+            <input type="checkbox" id="checkbox" />
+            <div class="slider round"></div>
+        </label>
+        <em>Dark Mode</em>
+    </div>
+
     <div class="d-block">
-    <div class="container bg-secondary text-dark" id="bck-container">
-        <div class="row  d-flex justify-content-center mt-5 mb-3" id="border">
-            <input type="text" class="form-control p-4 mt-4 mb-3 text-end" id="screen" readonly>
-        </div>
-        <div class="row d-flex justify-content-end">
-            <div class="col-3">
-            <button class="border-0 bg-white fw-bold shadow" id="reset" onclick="Reset('C')">C</button>
-        </div>
-        </div>
-        <div class="row p-3">
-            <div class="col-3">
-            <button class="bg-white rounded-3 border-0 fw-bold d-flex justify-content-center align-items-center shadow" onclick="appendNumber('7')">7</button>
+        <div class="container" id="bck-container">
+            <div class="row  d-flex justify-content-center mt-5 mb-3" id="border">
+                <input type="text" class="form-control p-4 mt-4 mb-3 text-end" id="screen" readonly>
             </div>
-            <div class="col-3">
-            <button class="bg-white rounded-3 border-0 fw-bold d-flex justify-content-center align-items-center shadow" onclick="appendNumber('8')">8</button>
-            </div>
-            <div class="col-3">
-            <button class="bg-white rounded-3 border-0 fw-bold d-flex justify-content-center align-items-center shadow" onclick="appendNumber('9')">9</button>
-            </div>
-            <div class="col-3">
-            <button class="bg-white rounded-3 border-0 fw-bold d-flex justify-content-center align-items-center shadow" onclick="appendOperation('/')">/</button>
-            </div>
-            </div>
-            
-            <div class="row p-3">
-            <div class="col-3">
-            <button class="bg-white rounded-3 border-0 fw-bold d-flex justify-content-center align-items-center shadow" onclick="appendNumber('4')">4</button>
-            </div>
-            <div class="col-3">
-            <button class="bg-white rounded-3 border-0 fw-bold d-flex justify-content-center align-items-center shadow" onclick="appendNumber('5')">5</button>
-            </div>
-            <div class="col-3">
-            <button class="bg-white rounded-3 border-0 fw-bold d-flex justify-content-center align-items-center shadow" onclick="appendNumber('6')">6</button>
-            </div>
-            <div class="col-3">
-            <button class="bg-white rounded-3 border-0 fw-bold d-flex justify-content-center align-items-center shadow" onclick="appendOperation('*')">x</button>
-            </div>
-        </div>
-           <div class="row p-3">
-            <div class="col-3">
-            <button class="bg-white rounded-3 border-0 fw-bold d-flex justify-content-center align-items-center shadow" onclick="appendNumber('1')">1</button>
-            </div>
-            <div class="col-3">
-            <button class="bg-white rounded-3 border-0 fw-bold d-flex justify-content-center align-items-center shadow" onclick="appendNumber('2')">2</button>
-            </div>
-            <div class="col-3">
-            <button class="bg-white rounded-3 border-0 fw-bold d-flex justify-content-center align-items-center shadow" onclick="appendNumber('3')">3</button>
-            </div>
-            <div class="col-3">
-            <button class="bg-white rounded-3 border-0 fw-bold d-flex justify-content-center align-items-center shadow " onclick="appendOperation('-')">-</button>
-            </div>
+            <div class="row d-flex justify-content-end">
+                <div class="col-3">
+                    <button class="border-0 fw-bold shadow" id="reset" onclick="Reset('C')">C</button>
+                </div>
             </div>
             <div class="row p-3">
-            <div class="col-3">
-            <button class="bg-white rounded-3 border-0 fw-bold d-flex justify-content-center align-items-center shadow" onclick="appendNumber('0')">0</button>
+                <div class="col-3">
+                    <button class="rounded-3 border-0 fw-bold d-flex justify-content-center align-items-center shadow"
+                        onclick="appendNumber('7')">7</button>
+                </div>
+                <div class="col-3">
+                    <button class="rounded-3 border-0 fw-bold d-flex justify-content-center align-items-center shadow"
+                        onclick="appendNumber('8')">8</button>
+                </div>
+                <div class="col-3">
+                    <button class="rounded-3 border-0 fw-bold d-flex justify-content-center align-items-center shadow"
+                        onclick="appendNumber('9')">9</button>
+                </div>
+                <div class="col-3">
+                    <button class="rounded-3 border-0 fw-bold d-flex justify-content-center align-items-center shadow"
+                        onclick="appendOperation('/')">/</button>
+                </div>
             </div>
-            <div class="col-3">
-            <button class="bg-white rounded-3 border-0 fw-bold d-flex justify-content-center align-items-center shadow" onclick="appendNumber('.')">.</button>
+
+            <div class="row p-3">
+                <div class="col-3">
+                    <button class="rounded-3 border-0 fw-bold d-flex justify-content-center align-items-center shadow"
+                        onclick="appendNumber('4')">4</button>
+                </div>
+                <div class="col-3">
+                    <button class="rounded-3 border-0 fw-bold d-flex justify-content-center align-items-center shadow"
+                        onclick="appendNumber('5')">5</button>
+                </div>
+                <div class="col-3">
+                    <button class="rounded-3 border-0 fw-bold d-flex justify-content-center align-items-center shadow"
+                        onclick="appendNumber('6')">6</button>
+                </div>
+                <div class="col-3">
+                    <button class="rounded-3 border-0 fw-bold d-flex justify-content-center align-items-center shadow"
+                        onclick="appendOperation('*')">x</button>
+                </div>
             </div>
-            <div class="col-3">
-            <button class="bg-white rounded-3 border-0 fw-bold d-flex justify-content-center align-items-center shadow" onclick="appendOperation('+')">+</button>
+            <div class="row p-3">
+                <div class="col-3">
+                    <button class="rounded-3 border-0 fw-bold d-flex justify-content-center align-items-center shadow"
+                        onclick="appendNumber('1')">1</button>
+                </div>
+                <div class="col-3">
+                    <button class="rounded-3 border-0 fw-bold d-flex justify-content-center align-items-center shadow"
+                        onclick="appendNumber('2')">2</button>
+                </div>
+                <div class="col-3">
+                    <button class="rounded-3 border-0 fw-bold d-flex justify-content-center align-items-center shadow"
+                        onclick="appendNumber('3')">3</button>
+                </div>
+                <div class="col-3">
+                    <button class="rounded-3 border-0 fw-bold d-flex justify-content-center align-items-center shadow"
+                        onclick="appendOperation('-')">-</button>
+                </div>
             </div>
-            <div class="col-3">
-            <button class="bg-danger rounded-3 border-0 fw-bold d-flex justify-content-center align-items-center shadow" onclick="calculate()">=</button>
+            <div class="row p-3">
+                <div class="col-3">
+                    <button class="rounded-3 border-0 fw-bold d-flex justify-content-center align-items-center shadow"
+                        onclick="appendNumber('0')">0</button>
+                </div>
+                <div class="col-3">
+                    <button class="rounded-3 border-0 fw-bold d-flex justify-content-center align-items-center shadow"
+                        onclick="appendNumber('.')">.</button>
+                </div>
+                <div class="col-3">
+                    <button class="rounded-3 border-0 fw-bold d-flex justify-content-center align-items-center shadow"
+                        onclick="appendOperation('+')">+</button>
+                </div>
+                <div class="col-3">
+                    <button class="rounded-3 border-0 fw-bold d-flex justify-content-center align-items-center shadow"
+                        onclick="calculate()">=</button>
+                </div>
             </div>
         </div>
     </div>
-    </div>
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.12.0/tsparticles.bundle.min.js"></script>
     <script src="index.js"></script>
+
 </body>
+
 </html>
